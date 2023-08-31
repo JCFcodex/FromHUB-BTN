@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 2rem;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    rgb(246, 195, 100),
+    rgb(40, 37, 37)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card p,
+button {
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-weight: 900;
+}
+
+.card {
+  display: flex;
+  user-select: none;
+  outline: 6px solid #ffa500;
+  outline-offset: 2px;
+  border-radius: 8px;
+
+  transition: all 1s 0.1s ease;
+}
+
+.card p {
+  background-color: #000;
+  color: #ffa500;
+  border-radius: 8px 0 0 8px;
+}
+.card p:active {
+  transform: translateX(-20px);
+}
+
+button {
+  font-size: inherit;
+  background-color: #ffa500;
+  border: 2px solid #ffa500;
+  border-radius: 0 8px 8px 0;
+}
+
+button:active {
+  transform: translateX(20px);
+}
+
+.card:hover {
+  outline-offset: 50px;
+  outline: solid #ffa60000;
+}
+
+.card:hover p {
+  background-color: #ffa500;
+  color: #000;
+  font-size: 3rem;
+}
+.card:active p {
+  background-color: #000;
+  color: #ffa500;
+  transition-delay: 0.2s;
+}
+
+.card:hover button {
+  transition-delay: 0.1s;
+  background-color: #000;
+  color: #ffa500;
+  font-size: 3rem;
+}
+.card:active button {
+  background-color: #ffa500;
+  color: #000;
+}
+
+.author p,
+.author a {
+  font-size: 0.3rem;
+  padding: 3px 6px;
+  font-weight: 600;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.author p {
+  color: #ffa500;
+  background-color: #000;
+  border: 2px solid #000;
+
+}
+
+.author a {
+  color: #000;
+  background-color: #ffa500;
+  transition: font-size 0.5s ease, color 0.5s ease;
+  border: 2px solid #ffa500;
+}
+
+.author a:hover {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #ffa500;
+  background-color: #000;
+}
